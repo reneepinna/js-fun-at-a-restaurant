@@ -94,7 +94,7 @@ fruits[4];
 // the value for isOpen should be true. Which other key value pairs would make sense to add to this object?
 var groceryStore = {
     name: "King Soopers",
-    isOpen: true;
+    isOpen: true,
 }
 
 
