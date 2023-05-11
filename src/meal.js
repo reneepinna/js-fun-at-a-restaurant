@@ -3,9 +3,22 @@ function nameMenuItem(foodName) {
   return `Delicious ${foodName}`;
 }
 
+function createMenuItem(food){
+  var menuItem = {
+    name: food,
+    price: 10.99,
+    type: "breakfast"
+  }
+  return menuItem;
+}
+
+function addIngredients(){
+  
+}
+
 module.exports = {
   nameMenuItem,
-  // createMenuItem,
+  createMenuItem,
   // addIngredients,
   // formatPrice,
   // decreasePrice,
