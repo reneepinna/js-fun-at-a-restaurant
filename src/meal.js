@@ -12,14 +12,22 @@ function createMenuItem(food){
   return menuItem;
 }
 
-function addIngredients(){
-  
+function addIngredients(food, ingredients){
+  //check that food is unique
+ for(var i = 0; i < ingredients.length; i++){
+   if(ingredients[i] === food){
+      return ingredients
+    }
+  }
+  //add food to the array
+    ingredients.push(food);
+    return ingredients;
 }
 
 module.exports = {
   nameMenuItem,
   createMenuItem,
-  // addIngredients,
+  addIngredients,
   // formatPrice,
   // decreasePrice,
   // createRecipe
