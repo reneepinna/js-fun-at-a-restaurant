@@ -38,7 +38,6 @@ function createRecipe(title, ingredients, menuItemType){
     ingredients: ingredients,
     type: menuItemType,
   }
-
   return recipe;
 }
 
