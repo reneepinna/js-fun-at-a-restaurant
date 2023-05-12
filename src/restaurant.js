@@ -3,21 +3,20 @@ function createRestaurant(name){
     name: name,
     menus: {breakfast: [], lunch: [], dinner: []}
   }
-
   return restaurant;
 }
 
 function addMenuItem(restaurant, item){
-  
+  //determine that the item is unique
   for(var i = 0; i < restaurant.menus[item.type].length; i++){
     if(restaurant.menus[item.type][i] === item){
       return restaurant;
     }
   }
+  //add item to the correctitem
   restaurant.menus[item.type].push(item);
   return restaurant;
 }
-
 
 function removeMenuItem(resturant, itemName, type){
   //If the array is empty return right away
