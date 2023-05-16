@@ -8,11 +8,9 @@ function createRestaurant(name){
 
 function addMenuItem(restaurant, item){
   //determine that the item is unique
-  for(var i = 0; i < restaurant.menus[item.type].length; i++){
-    if(restaurant.menus[item.type][i] === item){
+    if(restaurant.menus[item.type].includes(item)){
       return restaurant;
     }
-  }
   //add item to the correctitem
   restaurant.menus[item.type].push(item);
   return restaurant;
@@ -36,10 +34,8 @@ function removeMenuItem(resturant, itemName, type){
 }
 
 function checkForFood(restaurant, item){
-  for(var i = 0; i < restaurant.menus[item.type].length; i++){
-    if(restaurant.menus[item.type][i] === item){
+    if(restaurant.menus[item.type].includes(item)){
       return `Yes, we're serving ${item.name} today!`;
-    }
   }
   return `Sorry, we aren't serving ${item.name} today.`;
 }
