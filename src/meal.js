@@ -13,15 +13,12 @@ function createMenuItem(food, price, type) {
 }
 
 function addIngredients(food, ingredients) {
- for (var i = 0; i < ingredients.length; i++) {
-   if (ingredients[i] === food) {
-      return ingredients
-    }
-  }
-  
+   if (!ingredients.includes(food)) {
     ingredients.push(food);
     return ingredients;
+  }
 }
+
 
 function formatPrice(price) {
   return `$${price}`;

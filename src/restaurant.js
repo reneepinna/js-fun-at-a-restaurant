@@ -8,17 +8,14 @@ function createRestaurant(name) {
 }
 
 function addMenuItem(restaurant, item) {
-    if (restaurant.menus[item.type].includes(item)){
-      return restaurant;
-    }
-
-  restaurant.menus[item.type].push(item);
-
-  return restaurant;
+  if (!restaurant.menus[item.type].includes(item)) {
+    restaurant.menus[item.type].push(item);
+    return restaurant;
+   }
 }
 
 function removeMenuItem(resturant, itemName, type) {
-  if (resturant.menus[type].length === 0) {
+  if (!resturant.menus[type].length) {
     return `Sorry, we don't sell ${itemName}, try adding a new recipe!`;
   }
 
